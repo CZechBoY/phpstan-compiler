@@ -3,7 +3,7 @@
 	"description": "PHPStan Compiler",
 	"license": ["MIT"],
 	"require": {
-		"php": "~7.0",
+		"php": "~7.1",
 		"nette/neon": "^2.4",
 		"nette/tokenizer": "^2.2",
 		"nette/utils": "^2.4",
