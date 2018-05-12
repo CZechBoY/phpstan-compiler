@@ -22,7 +22,7 @@ class Executable
 
 	public function exec(string $command, string ...$args): string
 	{
-		$commandLine = $this->executable . ' ' . $command . ' ' . implode(' ', array_map('escapeshellarg', $args));
+		$commandLine = escapeshellarg($this->executable) . ' ' . $command . ' ' . implode(' ', array_map('escapeshellarg', $args));
 		$process = new Process($commandLine, $this->cwd);
 		$process->mustRun();
 		return $process->getOutput() . $process->getErrorOutput();
